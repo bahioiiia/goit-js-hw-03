@@ -1,22 +1,14 @@
-function getElementWidth(content, padding, border) {
-    return 2 * (Number.parseFloat(padding, 2) + Number.parseFloat(border, 2)) + Number.parseFloat(content, 2);
+function filterArray(numbers, value) { 
+    let numbHigh = [];
+  for (const element of numbers) {
+      if (element > value) {
+          numbHigh.push(element);
+      }
+  }
+  return numbHigh;
 }
 
-console.log(getElementWidth("50px", "8px", "4px")); // 74
-console.log(getElementWidth("60px", "12px", "8.5px")); // 101
-console.log(getElementWidth("200px", "0px", "0px")); // 200
-
-
-/* Задача 3. Фільтрація масиву чисел
-
-
-
-Виконуй це завдання у файлі task-3.js
-
-
-Напиши функцію filterArray(numbers, value), яка приймає масив чисел (numbers) та значення (value) як параметри. Функція повинна повертати новий масив лише тих чисел із масиву numbers, які більші за значення value.
-
-
+/* Функція повинна повертати новий масив лише тих чисел із масиву numbers, які більші за значення value.
 
 Усередині функції:
 
@@ -26,8 +18,9 @@ console.log(getElementWidth("200px", "0px", "0px")); // 200
 Поверни свій новий масив з підходящими числами як результат.
 
 
-Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
-
+Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.
+У консоль будуть виведені результати її роботи.
+ */
 
 
 console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
@@ -36,11 +29,7 @@ console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
 console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
 console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
 
-Залиш цей код для перевірки ментором.
-
-
-
-На що буде звертати увагу ментор при перевірці:
+/* На що буде звертати увагу ментор при перевірці:
 
 
 
